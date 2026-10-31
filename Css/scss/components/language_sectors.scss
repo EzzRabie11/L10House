@@ -1,0 +1,65 @@
+@use "../abstracts/index" as *;
+
+#Language_Sectors {
+    .part1 {
+        background-image: url("../images/youth.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: 300px;
+        @include flex();
+        @include position($p: relative, $t: 0, $l: 0, $z: 20);
+        .title {
+
+    h2 {
+        color: white;
+    }
+    &::after{
+        background-color:white;
+
+    }
+}
+        &::before {
+        @include position($t: 0, $l: 0);
+        @include createEle($w: 100%, $h: 100%);
+        background: radial-gradient(#68b703, #305d00);
+        opacity: .8;
+    }
+        .container {
+            position: relative;
+            .buttons {
+                width: fit-content;
+                margin: auto;
+                button{
+                    background-color: white;
+                    color:$secondColor;
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    transition-duration: 1s;
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+        }
+    }
+    .part2{
+
+        img{
+            width: 75%;
+            margin: auto;
+
+        }
+        .owl-dots{
+            width: fit-content;
+            margin: auto;
+            button{
+            background-color: $secondColor;
+            @include distance(10px,10px);
+            margin-right: 10px;
+            border-radius: 50%;
+            }
+        }
+    }
+}

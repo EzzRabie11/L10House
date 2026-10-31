@@ -1,0 +1,35 @@
+@use "../abstracts/index" as * ;
+
+#About {
+    background-color: white;
+
+    .part1 
+     {
+        .item{
+        @include respond(350px){
+            padding: 0px 20px;
+        }
+        @include respond(1050px){
+            padding:0px;
+        }
+    }
+    }
+    .part2  {
+        .item{
+        @include respond(350px){
+            padding: 0px 20px;
+        }
+        @include respond(1050px){
+            padding: 0px ;
+        }
+        p {
+            @include respond(350px){
+            font-size: 15px;
+        }
+        @include respond(450px){
+            font-size: 16px;
+        }
+        }
+    }    
+    }
+}

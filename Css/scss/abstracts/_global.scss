@@ -1,0 +1,141 @@
+@use "./variable" as *;
+@use "./mixins" as * ;
+body {
+    background: #8e9eab;
+    background: -webkit-linear-gradient(to right,#eef2f3,#8e9eab);
+    background: linear-gradient(to right, #eef2f3, #8e9eab);
+    overflow-x: hidden;
+}
+p {
+    color: #555;
+}
+
+.firstColor{
+    color: $firstColor;
+}
+
+.secondColor{
+    color: $secondColor;
+}
+
+.title {
+    position: relative;
+    width: fit-content;
+    margin: auto;
+
+    h2 {
+        color: $secondColor;
+        font-size: 45px;
+    }
+    &::after{
+        @include createEle(30%,4px);
+        background-color:$secondColor;
+        @include position($l:50% , $b:-10px);
+        transform: translateX(-50%);
+        border-radius: 10px;
+        transition-duration:.5s;
+
+    }
+}
+
+section:not(#Language_Sectors) {
+    &:hover {
+        .title::after{
+            width: 80%;
+        }
+    }
+}
+#Language_Sectors {
+    .part1{
+        &:hover {
+        .title::after{
+            width: 80%;
+        }
+    }
+    }
+    .part2{
+        &:hover {
+        .title::after{
+            width: 80%;
+        }
+    }
+    }
+    
+}
+.popup {
+    @include position($p: fixed, $t: 0, $l: 0, $z: 1000);
+    background-color: rgba(0, 0, 0, .5);
+    overflow-y: auto;
+    @include distance(100%,100%);
+    display: none;
+
+    .box {
+        background-color: white;
+        width: 75%;
+        margin: 50px auto;
+    }
+    &[data-popup-name="Sectors"]{
+        .item{
+            background-color: rgba(#719f3d, .2) ;
+        
+        img {
+            width:70px;
+        }
+        p{
+            color: black;
+        }
+    }
+}
+    &[data-popup-name="Languages"]{
+        overflow-x: hidden;
+        .box{
+            @include position($t:0,$r:0);
+            border-radius: 10px 0px 0px 10px;
+            width: 30%;
+            margin: auto;
+            transform: translateX(100%);
+            transition-duration: .5s;
+            &.show{
+                transform: translateX(0);
+            }
+            >i {
+                @include position($t:15px,$r:15px);
+                font-size: 20px;
+            }
+        
+        }
+            .section:nth-of-type(odd){
+                h5{
+                    position: relative;
+                    color:$firstColor;
+                    margin-bottom: 15px;
+                    width: fit-content;
+                    &::before{
+                        @include position($b:-7px,$l:0);
+                        @include createEle($w:50%,$h:3px);
+                        background-color: $firstColor;
+                    }
+                }
+                i {
+                    color: $firstColor;
+                };
+            }
+            .section:nth-of-type(even){
+                h5{
+                    color:$secondColor;
+                    position: relative;
+                    margin-bottom: 15px;
+                    width: fit-content;
+                    &::before{
+                        @include position($b:-7px,$l:0);
+                        @include createEle($w:50%,$h:3px);
+                        background-color: $secondColor;
+                    }
+                }
+                i{
+                    color: $secondColor;
+                }
+            }
+
+        }
+}

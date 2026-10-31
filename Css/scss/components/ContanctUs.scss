@@ -1,0 +1,88 @@
+@use "../abstracts/index"  as *;
+
+#ContactUs{
+    position: relative;
+    &::before {
+        @include createEle($w:100%,$h:100%);
+        @include position($t:0,$l:0);
+        background: radial-gradient(#68b703, #305d00);
+        opacity: .8;
+    }
+    background-image: url("../images/contact-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .title {
+        h2{
+            color: white;
+        }
+        &::after{
+                background-color: white;
+            }
+        
+    }
+    .part1{
+        .item{
+            background-color: white;
+            border-radius: 10px;
+            .inputBox{
+                @include flex();
+                 @include respond(350px){
+                    flex-direction: column;
+                }
+
+                @include respond(650px){
+                    flex-direction: row;
+                }
+            }
+            textarea{
+                resize: none;
+            }
+            button{
+                color: white;
+                background-color: $secondColor;
+                padding: 10px 20px;
+            }
+        }
+    }
+    .part2{
+        .item{
+        background-color: white;
+            border-radius: 10px;
+            height: 100%;
+            .flexDetail{
+                @include flex($jc:start);
+            i{
+                color: $secondColor;
+            }
+        }
+        .socialMedia{
+            @include flex($jc:start);
+            column-gap: 20px;
+            a{
+             text-decoration: none;
+             @include flex();
+             @include distance(40px,40px);
+             color: white;
+             border-radius: 50%;
+
+        }
+            
+             a.facebook{
+                background-color: #0045b5;
+             }
+             a.instagram{
+                 background-color: #c52661;
+             }
+             a.youtube{
+                background-color: #f70000;
+             }
+
+        }
+    }
+}
+}
+footer{
+    background-color: #333;
+    padding: 5px;
+}

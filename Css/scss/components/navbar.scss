@@ -1,0 +1,101 @@
+@use "../abstracts/index" as *;
+
+nav.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition-duration: .5s;
+
+    .navbar-brand {
+        width: 11%;
+        transition-duration: .5s;
+
+        @include respond(350px) {
+            width: 30%;
+        }
+
+        @include respond(450px) {
+            width: 25%;
+        }
+
+        @include respond(650px) {
+            width: 20%;
+        }
+
+        @include respond(850px) {
+            width: 15%;
+        }
+
+        @include respond(1050px) {
+            width: 10%;
+        }
+
+        @include respond(1250px) {
+            width: 8%;
+        }
+        
+
+    }
+    &.scrolled{
+            background-color: white;
+            transition-duration: .5s;
+        }
+
+    .navbar-collapse {
+        background-color: transparent;
+
+        @include respond(350px) {
+            background-color: white;
+            border-radius: 10px;
+            padding: 0px 22px 10px;
+        }
+
+
+        @include respond(1050px) {
+            background-color: transparent;
+        }
+
+        .nav-item {
+            position: relative;
+
+            .nav-link {
+                color: $firstColor;
+                font-weight: 500;
+                text-align: center;
+
+                @include respond(350px) {
+                    margin-top: 22px;
+                }
+                @include respond(1050px) {
+                    margin-top: 0px;
+                }
+
+
+
+                &.active {
+                    color: $firstColor;
+
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &::after {
+                    @include createEle($w: 0px, $h: 2.5px);
+                    background-color: $secondColor;
+                    transition-duration: .5s;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -10px;
+                    transform: translateX(-50%);
+                }
+
+                &:hover::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

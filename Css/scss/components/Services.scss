@@ -1,0 +1,134 @@
+@use "../abstracts/index" as *;
+
+#Services {
+    .box {
+        transition-duration: .5s;
+        padding: 20px 10px;
+        border-radius: 10px;
+        width: 75%;
+        margin: auto;
+        transform: translateY(0px);
+
+        &:hover {
+            background-color: white;
+            box-shadow: 0 20px 50px #00000080;
+            transform: translateY(-5px);
+
+        }
+
+        img {
+            width: 50px
+        }
+
+        a {
+            cursor: pointer;
+        }
+    }
+        .youtubeVideo {
+            background-image: url("../images/video-bg.jpg");
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            @include flex($jc:center,$Ai:center,$Fd:column);
+            @include position($p:relative,$t:0,$l:0,$z:20);
+
+            &::before {
+                @include position($t:0,$l:0);
+                @include createEle($w:100%,$h:100%);
+                background: radial-gradient(#68b703, #305d00);
+                opacity: .8;
+            }
+
+        .title {
+            h2{
+                color: white;
+            }
+                &::after{
+                    background-color: white;
+                }
+            
+            
+        }
+            
+            i{
+                font-size: 50px;
+                color: white;
+                position: relative;
+                transform: scale(1);
+                transition-duration: .5s;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+        }
+    }
+}
+
+.popup {
+    @include position($p: fixed, $t: 0, $l: 0, $z: 1000);
+    background-color: rgba(0, 0, 0, .5);
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    .box {
+        background-color: white;
+        width: 75%;
+        margin: 50px auto;
+
+        .head {
+            position: relative;
+            border-bottom: 1px solid black;
+
+            i {
+                @include position($t: 15px, $r: 15px);
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+
+        .body {
+            section {
+                ol {
+                    li {
+                        &::marker {
+                            color: $secondColor;
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+.popup.video {
+    @include position($p: fixed, $t: 0, $l: 0, $z: 1000);
+
+     .videoBox{
+        @include flex($jc:center,$Ai:center);
+        height: 100%;
+                video {
+                        width: 700px;
+                        height: 350px;
+
+                        @include respond(350px){
+                            width: 280px;
+                        height: 200px;
+                        }
+                        @include respond(450px){
+                            width: 350px;
+                            height: 200px;
+                        }
+                        @include respond(650px){
+                            width: 600px;
+                            height: 300px;
+                        }
+                        @include respond(1250px){
+                            width: 700px;
+                            height: 350px;
+                        }
+                  }
+}
+}

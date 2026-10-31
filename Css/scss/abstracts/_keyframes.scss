@@ -1,0 +1,39 @@
+@keyframes animateArrow1 {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes animateArrow2 {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+@keyframes animateArrow3 {
+    0% {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(40px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+}
