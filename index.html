@@ -17,6 +17,7 @@
   <meta name="keywords" content="HTML,CSS,bootstrap,Jquery,sass,plugins">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
+<body>
 <nav class="navbar navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="#"><img src="./images/logo.png" class="img-fluid" alt=""></a>
@@ -27,8 +28,8 @@
 
     <div class="collapse navbar-collapse mt-3 mt-md-0" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0 column-gap-3">
-        <li class="nav-item  ">
-          <a class="nav-link p-0 active " aria-current="page" href="#Home">Home</a>
+        <li class="nav-item ">
+          <a class="nav-link p-0 active " href="#Home">Home</a>
         </li>
         <li class="nav-item ">
           <a class="nav-link p-0" href="#About">About Us</a>
@@ -64,7 +65,7 @@
 <header id="Home" class="vh-100">
   <div class="container h-100 d-flex align-items-center justify-content-center">
     <div class="row w-100">
-      <div class="col-md-6 part1 mb-4 mb-md-0 wow animate__animated animate__slideInLeft " data-wow-duration="1.5s">
+      <div class="col-sm-6 part1 mt-2 mt-md-0 mb-2 mb-md-0 wow animate__animated animate__slideInLeft " data-wow-duration="1.5s">
         <div class="item">
           <h1 class="mb-0">L10N House</h1>
           <p class=" my-3 my-md-4">will help you communicate your message</p>
@@ -78,14 +79,14 @@
             </h5>
             <div class="d-flex mt-3 videoIcon align-items-center justify-content-start ">
               <a href="#Services" class="me-3">
-                <i class="fas fa-play"></i>
+                <i class="fas fa-play" onclick="scrollToVideo()"></i>
               </a>
               <p class="mb-0 fw-semibold text-black">play video</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-6 part2">
+      <div class="col-sm-6 part2">
         <div class="item">
           <img src="./images/globe-png-39540.png" class="img-fluid wow animate__animated animate__zoomIn "
             data-wow-duration="1.5s" alt="">
@@ -113,15 +114,15 @@
       </div>
       <div class="col-lg-7 part2">
         <div class="item wow animate__bounceIn data-wow-duration=" 1.5s" "> 
-          <p class=" mb-0">Located in the heart of dynamic Egypt, <span class="firstColor">L10N</span><span
-            class="secondColor"> House</span>
+          <p class=" mb-0">Located in the heart of dynamic Egypt, <span class="firstColor fw-bold">L10N</span><span
+            class="secondColor fw-bold"> House</span>
           is a fast-growing company fully equipped to fulfil your translation and localization requirements,
           whatever the size and scope of your project. Our personalized approach that reflects our passion and
           uncompromising commitment to every client has seen us enjoy constant and steady growth. We pride
           ourselves on our reputation for QUALITY, DEPENDABILITY, SPEED, and CONFIDENTIALITY – ensuring we
           deliver first-rate projects on time and on budget, every time. Our reputation is built on delivering
           reliable, accurate projects on time and on budget. Our 24/7 customer service allows us to solve your
-          problems in real time with a fast turn-around. <span class="firstColor">L10N</span><span class="secondColor">
+          problems in real time with a fast turn-around. <span class="firstColor fw-bold">L10N</span><span class="secondColor fw-bold">
             House</span> takes the stress out of the
           language
           translation and localization process by providing fast, high-quality service for every piece of
@@ -131,7 +132,7 @@
     </div>
   </div>
 </section>
-<section id="Services" class="pt-5">
+<section id="Services" class="py-5"> 
   <div class="container">
     <div data-duration-wow="1.5s" class="title wow animate__heartBeat mb-5">
       <h2 class="text-center fw-bold">Services</h2>
@@ -148,15 +149,15 @@
 </section>
 <section id="WhyUs">
   <div class="container">
-    <div data-duration-wow="1.5s" class="title wow animate__heartBeat mb-5">
-      <h2 class="text-center fw-bold">Why Us?</h2>
+    <div data-duration-wow="1.5s" class="title wow animate__heartBeat my-5">
+      <h2 class="text-center ">Why Us?</h2>
     </div>
     <div class="row row-gap-5 mb-5">
       <div class="col-md-6 col-lg-4">
         <div class="item rounded-3 wow animate__flipInY" data-wow-duration="1.5s">
           <div class="box rounded-3">
             <div class="content">
-              <h5>The Best</h5>
+              <h4>The Best</h4>
               <p class="text-light ">At <span class="firstColor">L10N</span><span class="secondColor"> House</span>,
                 each employee strives to embrace our core values of QUALITY, DEPENDABILITY, SPEED, and CONFIDENTIALITY.
                 These values are reflected in every service we provide, whether large or small.</p>
@@ -168,7 +169,7 @@
         <div class="item rounded-3">
           <div class="box box2 rounded-3">
             <div class="content">
-              <h5>Solutions for all your language challenges</h5>
+              <h4>Solutions for all your language challenges</h4>
               <p class="text-light ">Managing the multilingual content that gives a voice to your global strategy and
                 brand is accompanied by many challenges – from the creation of content and its translation into many
                 languages, to electronic publishing and printing across many formats. <span
@@ -182,7 +183,7 @@
         <div class="item rounded-3">
           <div class="box box3 rounded-3">
             <div class="content">
-              <h5>Our highly qualified teams</h5>
+              <h4>Our highly qualified teams</h4>
               <p class="text-light ">At <span class="firstColor">L10N</span><span class="secondColor"> House</span>
                 understands your business. Your own assigned linguists, project manager and account manager are
                 dedicated to provide outstanding service and deliver your project on schedule, within your budget &
@@ -203,8 +204,8 @@
     </div>
     <div class="content">
       <div class="buttons">
-      <button class="btn me-3 fw-semibold" onclick="openPopup('Sectors')">Sectors</button>
-      <button class="btn fw-semibold" onclick="openPopup('Languages')" >languages</button>
+      <button class="btn me-3 fw-semibold wow animate__zoomInLeft" onclick="openPopup('Sectors')">Sectors</button>
+      <button class="btn fw-semibold  wow animate__zoomInRight" onclick="openPopup('Languages')" >languages</button>
     </div>
     </div>
     </div>
@@ -235,63 +236,51 @@
 </section>
 <section id="ContactUs" class="py-5">
   <div class="container position-relative">
-     <div data-duration-wow="1.5s" class="title wow animate__heartBeat mb-5">
-      <h2 class="text-center fw-bold">Contact Us</h2>
+     <div data-duration-wow="1.5s" class="title wow animate__heartBeat mb-4">
+      <h2 class="text-center fw-bold ">GET IN TOUCH</h2>
     </div>
-    <p class="text-center text-light">For More information, please do not hesitate to contact us.</p>
+    <p class="text-center text-light mb-5">For More information, please do not hesitate to contact us.</p>
     <div class="content position-relative">
-      <div class="row">
-        <div class="col-md-6 part1">
-          <div class="item p-4">
-            <div class="inputBox column-gap-3 row-gap-3 mb-3">
-            <input type="text" placeholder="Full Name" class="form-control">
-            <input type="text" placeholder="Email Address" class="form-control">
+      <div class="row row-gap-4">
+        <div class="col-md-6 part1  ">
+          <div class="item p-4 wow animate__bounceInLeft">
+            <div class="inputBox  column-gap-4 row-gap-3 mb-3">
+            <input type="text" placeholder="Full Name*" class="form-control">
+            <input type="text" placeholder="Email Address*" class="form-control">
             </div>
-            <input type="text" placeholder="Email Address" class="form-control mb-3">
-            <input type="text" placeholder="PhoneNumber" class="form-control mb-3">
-            <textarea name="message" id="message" class="form-control mb-3" rows="5" placeholder="Your Message"></textarea>
+            <input type="text" placeholder="Phone Number*" class="form-control mb-3">
+            <textarea name="message" id="message" class="form-control mb-3" rows="5" placeholder="Your Message..."></textarea>
             <button class="btn">Send Message</button>
           </div>
         </div>
 
-        <div class="col-md-6 part2">
+        <div class="col-md-6 part2 wow animate__bounceInRight">
           <div class="item p-4">
-            <div class="detail mb-3">
+            <div class="detail mb-4">
             <div class="flexDetail">
-              <div class="row">
-                <div class="col-2">
-                  <i class=" fas fa-map-marker-alt"></i>
-                </div>
-                <div class="col-10">
-                  <h5>Address</h5>
-                  <p>178 Sameh Gado St. 6th October City, Giza, Egypt.</p>
-                </div>
+                  <i class="fas fa-map-marker-alt me-3 mt-1 "></i>
+                  <div>
+                  <h6 class="mb-0 fw-bolder">Address</h6>
+                  <p class="mb-0">178 Sameh Gado St. 6th October City, Giza, Egypt.</p>
+                  </div>
               </div>
             </div>
-            </div>
-            <div class="detail mb-3">
+            <div class="detail mb-4">
             <div class="flexDetail">
-              <div class="row">
-                <div class="col-3">
-                  <i class="fas fa-phone-alt"></i>
-                </div>
-                <div class="col-9">
-                  <h5>phone</h5>
-                  <p>info@l10nhouse.com</p>
-                </div>
+                  <i class="fas fa-phone-alt me-3 mt-1 "></i>
+                  <div>
+                  <h6 class="mb-0 fw-bolder">Phone</h6>
+                  <p class="mb-0 phone">(+202) 3825 0102 | (+202) 3825 0105</p>
+                  </div>
               </div>
             </div>
-            </div>
-            <div class="detail mb-3">
-            <div class="flexDetail ">
-              <div class="row">
-                <div class="col-3">
-                  <i class=" fas fa-envelope"></i>
-                </div>
-                <div class="col-9">
-                  <h5>E-mail</h5>
-                  <p>info@l10nhouse.com</p>
-                </div>
+            <div class="detail mb-4">
+            <div class="flexDetail">
+                  <i class="fas fa-map-marker-alt me-3 mt-1 "></i>
+                  <div>
+                  <h6 class="mb-0 fw-bolder">E-mail</h6>
+                  <p class="mb-0">info@l10nhouse.com</p>
+                  </div>
               </div>
             </div>
             <div class="socialMedia">
@@ -313,8 +302,18 @@
 
 </section>
 <footer>
-  <p class="text-light text-center mb-0">© 2021 SemiCode, Ltd. | All Rights Reserved .</p>
+  <p class="text-light text-center mb-0">© 2021 <span class="fw-bolder">SemiCode</span> , Ltd. | All Rights Reserved .</p>
 </footer>
+
+<div class="onLoading d-none">
+  <img src="./images/logo.png" alt="">
+</div>
+<div class="toTop d-none">
+  <a href="#Home" class="text-decoration-none">
+  <i class="fas fa-long-arrow-alt-up"></i>
+  <span>To Top</span>
+  </a>
+</div>
 
 <div class="popup" data-popup-name="Service" onclick="closePopup('Service')">
   <div class="container">
@@ -331,11 +330,12 @@
 </div>
 
 <div class="popup video" data-popup-name="Video" onclick="closePopup('Video')">
-  <div class="videoBox">
-    <video controls class="rounded-3">
-      <source src="https://www.youtube.com/watch?v=BMLRFrmRbKQ" type="video/mp4">
-      Your browser does not support this video.
-    </video>
+    <div class="videoBox">
+    <iframe
+        class="rounded-3"
+        src="https://www.youtube.com/embed/BMLRFrmRbKQ"
+        title="YouTube video player">
+    </iframe>
   </div>
 </div>
 
@@ -354,20 +354,19 @@
     </div>
   </div>
 </div>
+
 <div class="popup " data-popup-name="Languages" onclick="closePopup('Languages')">
   <div class="container">
-    <div class="box">
+    <div class="box ">
         <i class="fas fa-window-close" onclick="closePopup('Languages')"></i>
       <div class="body px-4 py-3">
-        
       </div>
     </div>
   </div>
 </div>
 
-
 </div>
-<body>
+
   <script src="./JS/bootstrap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="./JS/plugins/owl.carousel.min.js"></script>

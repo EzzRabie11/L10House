@@ -36,7 +36,14 @@
                     color:$secondColor;
                     padding: 10px 20px;
                     border-radius: 15px;
-                    transition-duration: 1s;
+                    transition-duration: .5s;
+                    transform: translateY(0px);
+                    @include respond(350px){
+                        font-size: 14px;
+                    }
+                    @include respond(450px){
+                        font-size: 16px;
+                    }
                     &:hover{
                         transform: translateY(-5px);
                     }

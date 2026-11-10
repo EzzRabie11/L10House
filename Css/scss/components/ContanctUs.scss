@@ -25,16 +25,30 @@
         .item{
             background-color: white;
             border-radius: 10px;
+            margin: auto;
+            @include respond(450px){
+                width: 85%;
+            }
+            @include respond(650px){
+                width: 70%;
+            }
+            @include respond(850px){
+                width: auto;
+            }
+            @include respond(1050px){
+                width: 90%;
+            }
             .inputBox{
                 @include flex();
                  @include respond(350px){
-                    flex-direction: column;
+                    flex-direction: row;
                 }
 
                 @include respond(650px){
-                    flex-direction: row;
+                    flex-direction: column;
                 }
             }
+            
             textarea{
                 resize: none;
             }
@@ -50,10 +64,28 @@
         background-color: white;
             border-radius: 10px;
             height: 100%;
+            margin: auto;
+            @include respond(450px){
+                width: 85%;
+            }
+            @include respond(650px){
+                width: 70%;
+            }
+            @include respond(850px){
+                width: auto;
+            }
+            @include respond(1050px){
+                width: 90%;
+            }
             .flexDetail{
-                @include flex($jc:start);
+                @include flex($jc:start ,$Ai:start);
             i{
                 color: $secondColor;
+                font-size: 20px;
+            }
+            p.phone{
+                text-wrap-mode: nowrap;
+                
             }
         }
         .socialMedia{
@@ -84,5 +116,9 @@
 }
 footer{
     background-color: #333;
-    padding: 5px;
+    padding: 10px;
+    border-top: 2px solid #2f2b63;
+    span{
+        letter-spacing:1.5px;
+    }
 }

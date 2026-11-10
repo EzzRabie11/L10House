@@ -37,3 +37,11 @@
         opacity: 0;
     }
 }
+@keyframes zoomInOutLoadingScreen{
+    0%{
+    transform: scale(.7);  
+    }
+    100%{
+        transform: scale(1);
+    } 
+}

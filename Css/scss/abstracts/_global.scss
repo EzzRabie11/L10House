@@ -9,7 +9,22 @@ body {
 p {
     color: #555;
 }
-
+.onLoading{
+    background: #ada996;
+    background: -webkit-linear-gradient(to right,#eaeaea,#dbdbdb,#f2f2f2,#ada996);
+    background: linear-gradient(to right, #eaeaea, #dbdbdb, #f2f2f2, #ada996);
+    width: 100%;
+    height: 100%;
+    @include flex();
+    @include position ($p:fixed,$t:0,$l:0,$z:1001);
+    img{
+        animation-name: zoomInOutLoadingScreen;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+    }
+}
 .firstColor{
     color: $firstColor;
 }
@@ -22,15 +37,27 @@ p {
     position: relative;
     width: fit-content;
     margin: auto;
+    @include respond(350px){
+        
 
+    }
     h2 {
         color: $secondColor;
         font-size: 45px;
+         @include respond(350px){
+        font-size: 30px;
+    }
+    @include respond(450px){
+        font-size: 35px;
+    }
+    @include respond(650px){
+        font-size: 45px;
+    }
     }
     &::after{
         @include createEle(30%,4px);
         background-color:$secondColor;
-        @include position($l:50% , $b:-10px);
+        @include position($l:50% , $b:-12px);
         transform: translateX(-50%);
         border-radius: 10px;
         transition-duration:.5s;
@@ -76,13 +103,15 @@ section:not(#Language_Sectors) {
     }
     &[data-popup-name="Sectors"]{
         .item{
-            background-color: rgba(#719f3d, .2) ;
+            background-color: #ebfbee;
         
         img {
             width:70px;
         }
         p{
+            background-color: #dfeee2;
             color: black;
+            font-size: 12px;
         }
     }
 }
@@ -95,6 +124,15 @@ section:not(#Language_Sectors) {
             margin: auto;
             transform: translateX(100%);
             transition-duration: .5s;
+            @include respond(350px){
+                width: 70%;
+            }
+            @include respond(350px){
+                width: 50%;
+            }
+            @include respond(650px){
+                width: 40%;
+            }
             &.show{
                 transform: translateX(0);
             }
@@ -138,4 +176,22 @@ section:not(#Language_Sectors) {
             }
 
         }
+}
+.toTop{
+    background-color: $firstColor;
+    @include position($p:fixed,$t:50%,$r:0,$z:1000);
+    transform: translate(52px,50%);
+    border-radius: 5px 0px 0px 5px;
+    padding: 5px;
+    transition-duration: .5s;
+    cursor: pointer;
+    i{
+        color: white;
+    }
+    span{
+        color: white;
+    }
+    &:hover{
+        transform: translate(0px,50%);
+    }
 }

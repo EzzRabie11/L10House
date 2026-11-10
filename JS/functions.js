@@ -1,7 +1,7 @@
 function prepareDesc(desc){
     let regex=/L10N House/gmi;
 
-return desc.replaceAll(regex,`<span class="fw-medium"> <span class="firstColor">L10N</span><span class="secondColor"> House</span>`);
+return desc.replaceAll(regex,`<span> <span class="firstColor fw-bold">L10N</span><span class="secondColor fw-bold"> House</span>`);
 }
 
 function openPopup(popupName){
@@ -57,7 +57,7 @@ function showService(serviceIndex){
       `<h3 class="mb-5 text-center secondColor">${service.title}</h3>
       <div class="row mb-5" >
         <div class="col-lg-6">
-          <div class="item">
+          <div class="item ">
           <p>${prepareDesc(service.description)}</p>
           </div>
         </div>
@@ -78,4 +78,9 @@ function prepareLanguages(languages){
            lis+= `<li> <i class="far fa-dot-circle"></i>${language}</li>`
         }
     return lis;
+}
+function scrollToVideo(){
+  let services = document.querySelector("#Services"),
+  youtubeVideo=services.offsetTop + 500;
+  window.scrollTo(youtubeVideo);
 }

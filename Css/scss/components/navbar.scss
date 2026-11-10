@@ -39,8 +39,47 @@ nav.navbar {
 
     }
     &.scrolled{
-            background-color: white;
+            background-color: #ffffffe6;
             transition-duration: .5s;
+            .navbar-brand{
+            width: 9%;
+            }
+            
+        @include respond(350px) {
+            .navbar-brand{
+            width: 25%;
+            }
+        }
+
+        @include respond(450px) {
+            .navbar-brand{
+            width: 20%;
+            }
+        }
+
+        @include respond(650px) {
+            .navbar-brand{
+            width: 15%;
+            }
+        }
+
+        @include respond(850px) {
+            .navbar-brand{
+            width: 10%;
+            }
+        }
+
+        @include respond(1050px) {
+            .navbar-brand{
+            width: 8%;
+            }
+        }
+        @include respond(1250px) {
+            .navbar-brand{
+            width: 6%;
+            }
+        }
+
         }
 
     .navbar-collapse {

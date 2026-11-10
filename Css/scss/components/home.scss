@@ -1,14 +1,16 @@
 @use "../abstracts/index" as *;
 
 #Home {
+    .row {
+        @include respond(350px){
+            transform: translateY(50px);
+        }
+        @include respond(650px){
+            transform: translateY(0px);
+        }
+    }
     .part1 {
         @include flex($jc: flex-start);
-        @include respond(650px){
-                margin-top: 130px
-            }
-            @include respond(850px){ 
-                margin-top: 0px
-            }
 
         h1 {
             color: $firstColor;
@@ -17,7 +19,7 @@
                 font-size: 35px;
             }
             @include respond(650px){
-                font-size: 45px;
+                font-size: 35px;
             }
             @include respond(850px){
                 font-size: 55px;
