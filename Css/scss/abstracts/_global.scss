@@ -139,6 +139,7 @@ section:not(#Language_Sectors) {
             >i {
                 @include position($t:15px,$r:15px);
                 font-size: 20px;
+                cursor: pointer;
             }
         
         }

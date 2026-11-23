@@ -36,7 +36,7 @@
                     color:$secondColor;
                     padding: 10px 20px;
                     border-radius: 15px;
-                    transition-duration: .5s;
+                    transition: all .5s;
                     transform: translateY(0px);
                     @include respond(350px){
                         font-size: 14px;
@@ -52,7 +52,6 @@
         }
     }
     .part2{
-
         img{
             width: 75%;
             margin: auto;

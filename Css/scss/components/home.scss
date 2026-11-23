@@ -2,6 +2,7 @@
 
 #Home {
     .row {
+        @include position ($p:relative,$z:10);
         @include respond(350px){
             transform: translateY(50px);
         }
@@ -110,7 +111,7 @@
     }
     }
     .arrows {
-        @include position ($b:15%,$l:50%,$z:3);
+        @include position ($b:15%,$l:50%,$z:11);
         transform:  translateX(-50%);
 
          img{ 
@@ -127,7 +128,7 @@
         }
     }
     >img {
-        @include position($b:0,$l:0);
+        @include position($b:0,$l:0,$z:2);
         width: 100%;
         transform: rotateX(180deg);
     }
